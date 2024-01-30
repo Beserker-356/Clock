@@ -225,8 +225,10 @@ body {
     align-items: center;
     font-family: sans-serif;
     font-weight: bold;
-    color: rgb(171, 136, 233);
+    color: rgb(207, 184, 248);
     font-size: 1.5rem;
+    cursor: pointer;
+    user-select: none;
 }
 
 

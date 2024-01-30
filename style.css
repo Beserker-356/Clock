@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(15, 5, 32);
+    display: flex;
+    justify-content: center;
+}
+
+#clock_body {
+    height: 330px;
+    width: 330px;
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    background-image: linear-gradient(110deg, #685f97, #252236);
+    box-shadow: 20px 10px 30px black;
+}
+
+#main {
+    height: 300px;
+    width: 300px;
+    margin-top: 50px;
+    background-color:#161420;
+    border-radius: 50%;
+    background-image: url('clock.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    box-shadow: 0px 0px 10px black;
+}
+
+#point {
+    height: 16px;
+    width: 16px;
+    background-color: rgb(204, 204, 204);
+    border-radius: 50%;
+    position: absolute;
+    top: 142px;
+    left: 142px;
+    box-shadow: 2px 2px 5px black;
+}
+
+#sec {
+    height: 120px;
+    width: 2px;
+    background-color: rgb(255, 65, 90);
+    position: absolute;
+    top: 30px;
+    left: 149px;
+    border-radius: 2px;
+    transform-origin: bottom center;
+    box-shadow: 0px 0px 5px black;
+}
+
+#min {
+    height: 100px;
+    width: 4px;
+    background-color: rgb(180, 180, 180);
+    position: absolute;
+    top: 50px;
+    left: 148px;
+    border-radius: 4px;
+    transform-origin: bottom center;
+    box-shadow: 0px 0px 5px black;
+}
+
+#hr {
+    height: 80px;
+    width: 6px;
+    background-color: rgb(69, 81, 189);
+    position: absolute;
+    top: 70px;
+    left: 147px;
+    border-radius: 6px;
+    transform-origin: bottom center;
+    box-shadow: 0px 0px 5px black;
+}
+
+#pendulum {
+    height: 500px;
+    width: 20px;
+    background-color: #1c1929;
+    position: absolute;
+    top: 150px;
+    left: 135px;
+    z-index: -1;
+    border-radius: 15px;
+    transform-origin: top center;
+    animation: none forwards 2s infinite;
+    animation-timing-function: linear;
+    box-shadow: 20px 10px 30px black;
+}
+
+#bob {
+    height: 70px;
+    width: 70px;
+    background-color: #252135;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: -20px;
+    box-shadow: 20px 10px 30px black;
+}
+
+#chime1 {
+    height: 200px;
+    width: 6px;
+    background-color: #815b29;
+    position: absolute;
+    left: 100px;
+    top: 300px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    transform-origin: top center;
+    animation: none forwards 1.75s infinite;
+    animation-timing-function: linear;
+    box-shadow: 20px 10px 30px black;
+}
+
+#chime1T {
+    height: 200px;
+    width: 10px;
+    position: absolute;
+    left: 100px;
+    top: 300px;
+}
+
+#chime2 {
+    height: 100px;
+    width: 4px;
+    background-color: #815b29;
+    position: absolute;
+    left: 146px;
+    top: 300px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    transform-origin: top center;
+    animation: none forwards 1.5s infinite;
+    animation-timing-function: linear;
+    box-shadow: 20px 10px 30px black;
+}
+
+#chime2T {
+    height: 100px;
+    width: 8px;
+    position: absolute;
+    left: 146px;
+    top: 300px;
+}
+
+#chime3 {
+    height: 150px;
+    width: 8px;
+    background-color: #815b29;
+    position: absolute;
+    left: 190px;
+    top: 300px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    transform-origin: top center;
+    animation: none forwards 1.25s infinite;
+    animation-timing-function: linear;
+    box-shadow: 20px 10px 30px black;
+}
+
+#chime3T {
+    height: 150px;
+    width: 12px;
+    position: absolute;
+    left: 190px;
+    top: 300px;
+}
+
+.chimes {
+    height: 40px;
+    width: 20px;
+    background-color: #a17439;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    box-shadow: 20px 10px 30px black;
+}
+
+.light {
+    height: 20px;
+    width: 5px;
+    background-color: #e2b37a;
+    position: absolute;
+    left: 3px;
+    top: 5px;
+    border-radius: 3px 0 0 3px;
+}
+
+#bob_light {
+    height: 30px;
+    width: 20px;
+    background-color: #433c5e;
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    border-radius: 50%;
+    transform: rotate(23deg);
+}
+
+#button {
+    height: 50px;
+    width: 130px;
+    background-color: #1c1929;
+    position: absolute;
+    top: 125px;
+    right: -300px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(171, 136, 233);
+    font-size: 1.5rem;
+}
+
+
+@keyframes pendulum {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-20deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes swing {
+    0%{
+        transform: rotate(0deg);
+    }
+    20%{
+        transform: rotate(-15deg);
+    }
+    40%{
+        transform: rotate(10deg);
+    }
+    60%{
+        transform: rotate(-7deg);
+    }
+    80%{
+        transform: rotate(4deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
